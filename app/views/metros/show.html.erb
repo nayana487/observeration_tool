@@ -1,0 +1,7 @@
+<h2><%= link_to "Return to Metros", metros_path %></h2>
+
+<p><%= @metro.name %></p>
+
+<% @metro.programs.each do |program| %>
+  <p><%= link_to program.name, metro_program_path(@metro, program)%></p>
+<% end %>

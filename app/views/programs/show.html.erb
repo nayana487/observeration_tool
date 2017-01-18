@@ -1,0 +1,11 @@
+<p><%= @program.name %></p>
+
+<% @program.instructors.each do |instructor| %>
+  <p><%= link_to instructor.name, program_instructor_path(@program, instructor)%></p>
+  <p><%= link_to "(edit)", edit_program_instructor_path(@program, instructor) %></p>
+<% end %>
+
+
+<h2><%= link_to "Return to #{@metro.name} Immersives", metro_path(@metro) %></h2>
+
+<h3> <%= link_to "Want to add a new instructor?(+)", new_program_instructor_path(@program) %></h3>

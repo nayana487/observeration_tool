@@ -1,0 +1,11 @@
+<%= form_for([@program, @instructor]) do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label "Photo" %>
+  <%= f.text_field :img_url %>
+
+  <%= f.submit %>
+
+<% end %>

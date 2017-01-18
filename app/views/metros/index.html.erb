@@ -1,0 +1,5 @@
+<div class="metro">
+    <% @metros.each do |metro| %>
+      <%= link_to metro.name, metro_path(metro), class: "metro_names" %>
+    <% end %>
+</div>
