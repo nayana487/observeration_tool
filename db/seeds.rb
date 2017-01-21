@@ -113,5 +113,5 @@ Observation.create({
 })
 
 current_metro = Metro.create({
-  name: "New York City"
+  name: "Chicago"
 })

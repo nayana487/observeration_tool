@@ -1,11 +1,15 @@
-<p><%= @program.name %></p>
+<div class="program_show">
+  <p class="program_name"><%= @program.name %></p>
 
-<% @program.instructors.each do |instructor| %>
-  <p><%= link_to instructor.name, program_instructor_path(@program, instructor)%></p>
-  <p><%= link_to "(edit)", edit_program_instructor_path(@program, instructor) %></p>
-<% end %>
+  <div class="instructor_names">
+    <% @program.instructors.each do |instructor| %>
+      <p class="instructor_name"><%= link_to instructor.name, program_instructor_path(@program, instructor)%><%= link_to " (edit)", edit_program_instructor_path(@program, instructor) %></p>
+    <% end %>
+  </div>
 
 
-<h2><%= link_to "Return to #{@metro.name} Immersives", metro_path(@metro) %></h2>
+  <h2><%= link_to "Return to #{@metro.name} Immersives", metro_path(@metro) %></h2>
 
-<h3> <%= link_to "Want to add a new instructor?(+)", new_program_instructor_path(@program) %></h3>
+  <h3> <%= link_to "Want to add a new instructor?(+)", new_program_instructor_path(@program) %></h3>
+
+</div>

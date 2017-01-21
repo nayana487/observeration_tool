@@ -1,7 +1,10 @@
-<h2><%= link_to "Return to Metros", metros_path %></h2>
+<div class="city_metro">
+  <p><%= @metro.name %></p>
+  <p class="metro_return"><%= link_to "Return to Metros", metros_path %></p>
+</div>
 
-<p><%= @metro.name %></p>
-
-<% @metro.programs.each do |program| %>
-  <p><%= link_to program.name, metro_program_path(@metro, program)%></p>
-<% end %>
+<div class="immersive_labels">
+  <% @metro.programs.each do |program| %>
+    <p><%= link_to program.name, metro_program_path(@metro, program), class: "immersive_name"%></p>
+  <% end %>
+</div>
